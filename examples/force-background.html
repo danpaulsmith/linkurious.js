@@ -82,10 +82,10 @@
 var i,
     s,
     o,
-    N = 1000,
-    E = 5000,
-    C = 5,
-    d = 0.5,
+    N = 250,
+    E = 1000,
+    C = 10,
+    d = 0.9,
     cs = [],
     g = {
       nodes: [],
@@ -136,8 +136,8 @@ s = new sigma({
   graph: g,
   container: 'graph-container',
   settings: {
-    drawEdges: false,
-    animationsTime: 2500
+    drawEdges: true,
+    animationsTime: 1000
   }
 });
 
@@ -146,7 +146,7 @@ var fa = sigma.layouts.configForceAtlas2(s, {
   worker: true,
   barnesHutOptimize: false,
   autoStop: true,
-  background: true,
+  background: false,
   easing: 'cubicInOut'
 });
 
